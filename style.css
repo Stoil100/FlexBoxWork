@@ -3,6 +3,7 @@ html{
 }
 *,*::before,*::after{
     box-sizing: inherit;
+    
 }
 body{
     font-family: sans-serif;
@@ -24,10 +25,28 @@ a{
 a:hover{
     background: rgba(0,0,0,0.3);
 }
+.toggleNav{
+    display: none;
+}
+.input{
+    padding: 10px;
+    border: 0;
+}
 .wrapper{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 50px;
+    
+}
+img{
+    width: 100%;
+}
+section, footer{
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 100;
 }
 .flex-nav ul{
     border: 1px solid black;
@@ -61,6 +80,30 @@ flex-wrap: wrap;
     .flex-nav li{
         flex-basis:100%;
     }
-    
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper > *{
+        order:10;
+    }
+    .flex-nav{
+        order: 1;
+    }
+    .toggleNav{
+        display: block;
+    }
+    .flex-nav ul{
+        display: none;
+    }
+    .top{
+        order:2;
+    }
+    .details{
+        order:3;
+    }
+    .signup{
+        order:4;
+    }
     
 }
